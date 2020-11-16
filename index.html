@@ -35,10 +35,10 @@
         }
     });
 
-
-    // version two cleaner
     console.log({isAdult}); // returns true abd shows object
 
+
+    // version two cleaner
     const isAdult2 = people.some(person => {
         const currentYear = (new Date()).getFullYear(); // get current year
         return currentYear - person.year >= 19;
@@ -46,7 +46,14 @@
 
     console.log({isAdult2}); // returns true abd shows object
 
-    
+
+
+    // version three even cleaner
+    const isAdult3 = people.some(person => ((new Date()).
+        getFullYear()) - person.year >= 19 );
+
+    console.log({isAdult3}); // returns true abd shows object
+
 
     
 
